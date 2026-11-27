@@ -147,7 +147,7 @@ footer > span { font: italic .95rem var(--latin); }
   .poster .ticket { margin-top: 1rem; }
   .ticket { padding: 11px 15px; font-size: .9rem; }
   .dates { margin-top: 20px; font-size: .77rem; }
-  .postmark { top: 15px; right: 14px; bottom: auto; width: 66px; }
+  .postmark { top: 15px; left: 14px; right: auto; bottom: auto; width: 66px; }
   .postmark i { font-size: 1.65rem; }
   .postmark svg { width: 11px; height: 11px; }
   .postmark small { font-size: .43rem; }
