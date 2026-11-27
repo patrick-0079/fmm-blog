@@ -1,0 +1,9 @@
+{
+  "name": "fmm-blog",
+  "compatibility_date": "2026-10-31",
+  "workers_dev": false,
+  "assets": { "directory": "./public" },
+  "routes": [
+    { "pattern": "blog.xn--nemu-k77ja176r.space", "custom_domain": true }
+  ]
+}

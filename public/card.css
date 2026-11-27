@@ -1,0 +1,55 @@
+.wish-card[hidden] { display: none; }
+.wish-card {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(35px, 7vw, 110px);
+  align-items: center;
+  width: min(1100px, 93%);
+  margin: clamp(60px, 7vw, 106px) auto;
+}
+.wish-editor { min-width: 0; }
+.wish-editor h2 { margin: 0 0 1.4rem; font-size: clamp(2rem, 3.4vw, 3.05rem); }
+.wish-editor .eyebrow { margin-bottom: .65rem; }
+.wish-field-label { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.wish-field-label label, .wish-palette legend { font-weight: 650; font-size: .91rem; }
+#wish-count { color: #775e66; font-size: .78rem; font-variant-numeric: tabular-nums; }
+#wish-message {
+  width: 100%; margin-top: 8px; resize: vertical; min-height: 5.7rem; padding: 11px 13px;
+  color: var(--ink); background: #fffdfa; border: 1px solid #cbbab9; border-radius: 4px;
+  font: inherit; font-size: 1rem; line-height: 1.65;
+}
+.wish-palette { border: 0; min-width: 0; padding: 0; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 2px 12px; }
+.wish-palette legend { margin-bottom: .25rem; padding: 0; }
+.wish-palette label {
+  position: relative; min-height: 42px; display: inline-flex; align-items: center; gap: 5px;
+  color: #604952; font-size: .82rem; cursor: pointer;
+}
+.wish-palette input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.wish-swatch {
+  flex: none; width: 17px; height: 17px; margin: 3px; border-radius: 50%;
+  background: #f3d9df; box-shadow: inset 0 0 0 1px #93787980;
+}
+[value="cream"] + .wish-swatch { background: #f9eed8; }
+[value="lilac"] + .wish-swatch { background: #e7dff0; }
+.wish-palette input:checked + .wish-swatch { outline: 2px solid #773752; outline-offset: 2px; }
+.wish-palette input:focus-visible + .wish-swatch { outline: 3px dashed #702646; outline-offset: 3px; }
+.wish-editor textarea:focus-visible, .wish-download:focus-visible { outline: 3px solid #823653; outline-offset: 3px; }
+.wish-download { border: 0; cursor: pointer; font-family: inherit; min-height: 44px; }
+.wish-download:disabled { opacity: .52; cursor: default; }
+.wish-status { color: #704755; font-size: .85rem; line-height: 1.65; }
+.wish-status:not(:empty) { margin-top: .6rem; }
+.wish-desk {
+  margin: 0; min-width: 0; padding: clamp(22px, 3vw, 48px) clamp(18px, 2.8vw, 42px);
+  background-color: #f3e8e5;
+  background-image: repeating-linear-gradient(90deg, transparent 0 8px, #fff9f62e 8px 9px);
+  border: 1px solid #e4d3cf;
+}
+.wish-preview {
+  display: block; width: 100%; height: auto; background: #f7e1e4;
+  transform: rotate(-2deg); box-shadow: 0 7px 14px #63474420, 2px 3px 0 #fff8f1;
+}
+@media (max-width: 760px) {
+  .wish-card { grid-template-columns: minmax(0, 1fr); gap: 24px; width: min(100%, 520px); margin-block: 52px; }
+  .wish-editor h2 { margin-bottom: 1rem; }
+  .wish-desk { padding: 18px 12px; }
+}
